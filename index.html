@@ -42,13 +42,27 @@
         a:hover {
             text-decoration: underline;
         }
+        #penguins-container {
+            margin-top: 40px;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("penguins.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("penguins-container").innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the penguins.html file:', error));
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Bioinformatics Masters Project</h1>
         <p>Here are figures and R markdown files I have made whilst working on my Bioinformatics masters project at UCL. I'm seeking to understand if TDP-43 cryptic splicing events happen near neurodegenerative disease risk genes.</p>
         <p>Check out my <a href="https://www.linkedin.com/in/hannah-whiteley-595123299/" target="_blank">LinkedIn profile</a> for more information.</p>
+        <div id="penguins-container"></div>
     </div>
 </body>
 </html>
