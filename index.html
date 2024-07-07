@@ -23,17 +23,16 @@
             background: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            text-align: center;
         }
         h1 {
             color: #4CAF50;
             font-size: 2em;
             margin-bottom: 20px;
-            text-align: center;
         }
         p {
             font-size: 1.2em;
             line-height: 1.6;
-            text-align: center;
         }
         a {
             color: #4CAF50;
@@ -42,20 +41,20 @@
         a:hover {
             text-decoration: underline;
         }
-        #penguins-container {
+        .pdf-container {
             margin-top: 40px;
         }
+        .pdf-link {
+            margin: 10px 0;
+            display: block;
+        }
+        .pdf-embed {
+            margin-top: 20px;
+            border: none;
+            width: 100%;
+            height: 500px;
+        }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("penguins.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("penguins-container").innerHTML = data;
-                })
-                .catch(error => console.error('Error loading the penguins.html file:', error));
-        });
-    </script>
 </head>
 <body>
     <div class="container">
@@ -63,8 +62,12 @@
         <p>Here are figures and R markdown files I have made whilst working on my Bioinformatics masters project at UCL. I'm seeking to understand if TDP-43 cryptic splicing events happen near neurodegenerative disease risk genes.</p>
         <p>Check out my <a href="https://www.linkedin.com/in/hannah-whiteley-595123299/" target="_blank">LinkedIn profile</a> for more information.</p>
         <h1>Main Page Content</h1>
-        <a href="all_snps_1.pdf" target="_blank">Download PDF</a>
-        <div id="penguins-container"></div>
+
+        <div class="pdf-container">
+            <h2>Embedded Visualizations</h2>
+            <embed class="pdf-embed" src="all_snps_1.pdf" type="application/pdf">            <!-- Add more embedded PDFs as needed -->
+        </div>
+        
     </div>
 </body>
 </html>
