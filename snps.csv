@@ -1,0 +1,25 @@
+
+# Process the dataframe
+test_for_plot <- joined_20k |> 
+  filter(!is.na(protein_name)) |> 
+  group_by(snp_id) |> 
+  filter(snp_id == "73205628") |> 
+  mutate(minormax = case_when(
+    avg_diff == max(avg_diff, na.rm = TRUE) ~ "max",
+    avg_diff == min(avg_diff, na.rm = TRUE) ~ "min",
+    TRUE ~ NA_character_  # Assign NA to all other rows
+  ))
+
+ggplot(test_for_plot, aes(x = protein_name, y = avg_diff, fill = minormax)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_manual(values = c("max" = "red", "min" = "blue", "NA" = "grey")) +
+  labs(title = "Protein vs Avg Diff",
+       x = "Protein Name",
+       y = "Avg Diff",
+       fill = "Legend") +
+  theme_minimal() +
+  theme_classic() +
+  theme(axis.title.x = element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y = element_blank())
