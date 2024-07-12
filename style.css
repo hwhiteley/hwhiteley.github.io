@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -87,3 +88,94 @@ a:hover {
 .side-tab:hover .tab-content {
     display: block;
 }
+=======
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    color: #8e90e4;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+a {
+    color: #8ebbe4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pdf-container {
+    margin-top: 40px;
+}
+
+.pdf-embed {
+    margin-top: 20px;
+    border: none;
+    width: 100%;
+    height: 500px;
+}
+
+.side-tab {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    transition: width 0.3s;
+    overflow-x: hidden;
+    background-color: #333;
+    border-radius: 0 8px 8px 0;
+}
+
+.side-tab:hover {
+    width: 300px;
+}
+
+.tab {
+    display: block;
+    padding: 16px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid #555;
+}
+
+.tab-content {
+    padding: 16px;
+    display: none;
+    background-color: #333;
+    color: white;
+}
+
+.side-tab:hover .tab-content {
+    display: block;
+}
+>>>>>>> 00cc3df7efa4884e736a6201d092e5efd646b9f1
