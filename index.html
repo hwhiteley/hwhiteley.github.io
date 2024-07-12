@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bioinformatics Masters Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .pdf-container {
+            margin-top: 40px;
+        }
+        .pdf-embed {
+            margin-top: 20px;
+            border: none;
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 </head>
-<body>
-    <div class="side-tab">
-        <a href="#" class="tab">Masters Project Visualizations</a>
-        <div class="tab-content">
-            <h2>Side Tab Content</h2>
-            <p>This is the content inside the side tab.</p>
-            <p>You can add any HTML content here.</p>
-        </div>
-    </div>
-</body>
 <body>
     <div class="container">
         <h1>Bioinformatics Masters Project</h1>
-        <p> Figures and R Markdowns I have made whilst working on my Bioinformatics masters project at UCL. I'm seeking to understand if TDP-43 cryptic splicing events happen near neurodegenerative disease risk genes.</p>
+        <p> Figures and R markdowns I have made whilst working on my Bioinformatics masters project at UCL. I'm seeking to understand if TDP-43 cryptic splicing events happen near neurodegenerative disease risk genes.</p>
         <p>Check out my <a href="https://www.linkedin.com/in/hannah-whiteley-595123299/" target="_blank">LinkedIn profile</a> for more information.</p>
         <h1>Main Page Content</h1>
 
         <!-- Embed PDFs in the page -->
         <div class="pdf-container">
-            <h2>Embedded Visualizations </h2>
+            <h2>Embedded Visualizations</h2>
             <embed class="pdf-embed" src="poster_msc_bioinformatics.pdf" type="application/pdf">
             <!-- Add more embedded PDFs as needed -->
         </div>
     </div>
-    
-    
 </body>
 </html>
